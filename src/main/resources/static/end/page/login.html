@@ -61,6 +61,14 @@
         },
         methods: {
             login(){
+                if(!this.user.name){
+                    alert("请输入用户名");
+                    return ;
+                }
+                if(!this.user.password){
+                    alert("请输入密码");
+                    return ;
+                }
                 axios.post('/login', this.user).then(res => {
                     if(res.data.code === '0'){
                         location.href = '/end/page/index.html';
@@ -70,7 +78,17 @@
                 });
             },
             reset(){
-
+                if(!this.user.name){
+                    alert("请输入用户名");
+                    return ;
+                }
+                axios.post('/resetPassword', this.user).then(res => {
+                    if(res.data.code === '0'){
+                        alert("重置密码成功，密码已重置为：123456");
+                    }else{
+                        alert(res.data.msg);
+                    }
+                });
             }
         }
     });
