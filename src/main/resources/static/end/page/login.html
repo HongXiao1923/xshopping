@@ -71,6 +71,7 @@
                 }
                 axios.post('/login', this.user).then(res => {
                     if(res.data.code === '0'){
+                        localStorage.setItem('user', JSON.stringify(res.data.data));
                         location.href = '/end/page/index.html';
                     }else{
                         alert(res.data.msg);

@@ -7,6 +7,7 @@ import com.javaclimb.xshopping.common.ResultCode;
 import com.javaclimb.xshopping.entity.UserInfo;
 import com.javaclimb.xshopping.exception.CustomException;
 import com.javaclimb.xshopping.service.UserInfoService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -56,5 +57,17 @@ public class AccountController {
     @PostMapping("/resetPassword")
     public Result resetPassword(@RequestBody UserInfo userInfo){
         return Result.success(userInfoService.resetPassword(userInfo.getName()));
+    }
+
+    /**
+     * 登出
+     * @param request
+     * @return
+     */
+    @GetMapping("/logout")
+    public Result logout(HttpServletRequest request){
+        request.getSession().setAttribute(Common.USER_INFO, null);
+
+        return Result.success();
     }
 }

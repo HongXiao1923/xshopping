@@ -192,3 +192,76 @@
 2023-01-12 07:35:15.706  INFO 10852 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-12 07:35:15.706  INFO 10852 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-01-12 07:35:15.707  INFO 10852 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-12 08:19:34.197  INFO 10852 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-12 08:19:34.206  INFO 10852 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-12 08:19:38.159  INFO 13296 --- [main] c.j.xshopping.XshoppingApplication       : Starting XshoppingApplication using Java 1.8.0_321 on DESKTOP-13U3QLT with PID 13296 (C:\Java\Projects\xshopping\target\classes started by 19230 in C:\Java\Projects\xshopping)
+2023-01-12 08:19:38.162  INFO 13296 --- [main] c.j.xshopping.XshoppingApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-12 08:19:38.910  WARN 13296 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.javaclimb.xshopping]' package. Please check your configuration.
+2023-01-12 08:19:39.447  INFO 13296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-01-12 08:19:39.461  INFO 13296 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-12 08:19:39.462  INFO 13296 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2023-01-12 08:19:39.738  INFO 13296 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-12 08:19:39.738  INFO 13296 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1530 ms
+2023-01-12 08:19:39.876  INFO 13296 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-12 08:19:40.050  INFO 13296 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-12 08:19:40.912  INFO 13296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-01-12 08:19:40.922  INFO 13296 --- [main] c.j.xshopping.XshoppingApplication       : Started XshoppingApplication in 3.586 seconds (JVM running for 5.128)
+2023-01-12 08:19:56.352  INFO 13296 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-12 08:19:56.353  INFO 13296 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-12 08:19:56.354  INFO 13296 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-12 08:21:26.520  INFO 13296 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-12 08:21:26.527  INFO 13296 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-12 08:21:30.383  INFO 15488 --- [main] c.j.xshopping.XshoppingApplication       : Starting XshoppingApplication using Java 1.8.0_321 on DESKTOP-13U3QLT with PID 15488 (C:\Java\Projects\xshopping\target\classes started by 19230 in C:\Java\Projects\xshopping)
+2023-01-12 08:21:30.387  INFO 15488 --- [main] c.j.xshopping.XshoppingApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-12 08:21:31.087  WARN 15488 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.javaclimb.xshopping]' package. Please check your configuration.
+2023-01-12 08:21:31.489  INFO 15488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-01-12 08:21:31.498  INFO 15488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-12 08:21:31.498  INFO 15488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2023-01-12 08:21:31.651  INFO 15488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-12 08:21:31.651  INFO 15488 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1212 ms
+2023-01-12 08:21:31.728  INFO 15488 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-12 08:21:31.828  INFO 15488 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-12 08:21:32.596  INFO 15488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-01-12 08:21:32.606  INFO 15488 --- [main] c.j.xshopping.XshoppingApplication       : Started XshoppingApplication in 2.719 seconds (JVM running for 3.587)
+2023-01-12 08:21:36.060  INFO 15488 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-12 08:21:36.061  INFO 15488 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-12 08:21:36.062  INFO 15488 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-12 08:34:28.261  INFO 15488 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-12 08:34:28.263  INFO 15488 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-12 08:34:33.864  INFO 7284 --- [main] c.j.xshopping.XshoppingApplication       : Starting XshoppingApplication using Java 1.8.0_321 on DESKTOP-13U3QLT with PID 7284 (C:\Java\Projects\xshopping\target\classes started by 19230 in C:\Java\Projects\xshopping)
+2023-01-12 08:34:33.868  INFO 7284 --- [main] c.j.xshopping.XshoppingApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-12 08:34:34.559  WARN 7284 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.javaclimb.xshopping]' package. Please check your configuration.
+2023-01-12 08:34:34.966  INFO 7284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-01-12 08:34:34.974  INFO 7284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-12 08:34:34.974  INFO 7284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2023-01-12 08:34:35.120  INFO 7284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-12 08:34:35.120  INFO 7284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1185 ms
+2023-01-12 08:34:35.188  INFO 7284 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-12 08:34:35.326  INFO 7284 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-12 08:34:36.136  INFO 7284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-01-12 08:34:36.145  INFO 7284 --- [main] c.j.xshopping.XshoppingApplication       : Started XshoppingApplication in 3.075 seconds (JVM running for 4.204)
+2023-01-12 08:34:45.090  INFO 7284 --- [http-nio-8888-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-12 08:34:45.092  INFO 7284 --- [http-nio-8888-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-12 08:34:45.095  INFO 7284 --- [http-nio-8888-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-01-12 08:35:14.285  INFO 7284 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-12 08:35:14.291  INFO 7284 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-12 08:35:17.957  INFO 4604 --- [main] c.j.xshopping.XshoppingApplication       : Starting XshoppingApplication using Java 1.8.0_321 on DESKTOP-13U3QLT with PID 4604 (C:\Java\Projects\xshopping\target\classes started by 19230 in C:\Java\Projects\xshopping)
+2023-01-12 08:35:17.960  INFO 4604 --- [main] c.j.xshopping.XshoppingApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-12 08:35:18.623  WARN 4604 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.javaclimb.xshopping]' package. Please check your configuration.
+2023-01-12 08:35:19.032  INFO 4604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-01-12 08:35:19.040  INFO 4604 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-12 08:35:19.040  INFO 4604 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2023-01-12 08:35:19.192  INFO 4604 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-12 08:35:19.193  INFO 4604 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1177 ms
+2023-01-12 08:35:19.269  INFO 4604 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-12 08:35:19.364  INFO 4604 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-12 08:35:20.156  INFO 4604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-01-12 08:35:20.166  INFO 4604 --- [main] c.j.xshopping.XshoppingApplication       : Started XshoppingApplication in 2.731 seconds (JVM running for 3.76)
+2023-01-12 08:35:29.463  INFO 4604 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-12 08:35:29.464  INFO 4604 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-12 08:35:29.465  INFO 4604 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-12 08:37:52.191  WARN 4604 --- [http-nio-8888-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/wx_shop?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8, version : 1.2.4, lastPacketReceivedIdleMillis : 138136
+2023-01-12 08:45:23.328  WARN 4604 --- [http-nio-8888-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/wx_shop?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8, version : 1.2.4, lastPacketReceivedIdleMillis : 398084
+2023-01-12 09:07:15.929  WARN 4604 --- [http-nio-8888-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/wx_shop?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8, version : 1.2.4, lastPacketReceivedIdleMillis : 1312581
+2023-01-12 09:16:44.060  INFO 4604 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-12 09:16:44.067  INFO 4604 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
