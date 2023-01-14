@@ -1,7 +1,10 @@
 package com.javaclimb.xshopping.service;
 
 import cn.hutool.core.collection.CollectionUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.javaclimb.xshopping.common.ResultCode;
 import com.javaclimb.xshopping.entity.UserInfo;
 import com.javaclimb.xshopping.exception.CustomException;
@@ -58,5 +61,44 @@ public class UserInfoService {
         userInfoMapper.updateByPrimaryKeySelective(list.get(0));
 
         return list.get(0);
+    }
+
+    /**
+     * 分页查询用户列表
+     * @param pageNum
+     * @param pageSize
+     * @param name
+     * @return
+     */
+    public PageInfo<UserInfo> findPage(Integer pageNum, Integer pageSize, String name){
+        PageHelper.startPage(pageNum, pageSize);
+        List<UserInfo> list = userInfoMapper.findByName(name);
+
+        return PageInfo.of(list);
+    }
+
+    /**
+     * 新增用户
+     * @param userInfo
+     * @return
+     */
+    public UserInfo add(UserInfo userInfo){
+        //判断用户是否已存在
+        int count = userInfoMapper.checkRepeat("name", userInfo.getName());
+        if(count > 0){
+            throw new CustomException(ResultCode.USER_EXIST_ERROR);
+        }
+        //验证密码
+        if(StrUtil.isBlank(userInfo.getPassword())){
+            //默认密码123456
+            userInfo.setPassword(SecureUtil.md5("123456"));
+        }else{
+            userInfo.setPassword(SecureUtil.md5(userInfo.getPassword()));
+        }
+        //设置新增用户是买家
+        userInfo.setLevel(3);
+        userInfoMapper.insertSelective(userInfo);
+
+        return userInfo;
     }
 }

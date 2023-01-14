@@ -7,10 +7,15 @@ import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
+/**
+ * 用户相关的 Mapper
+ */
 @Repository
 public interface UserInfoMapper extends Mapper<UserInfo> {
+    /*根据用户名查询*/
     List<UserInfo> findByName(@Param("name") String name);
-
+    /*用户唯一性判断*/
+    int checkRepeat(@Param("column")String column, @Param("value")String value);
 
 
     /*增删改查的方法全部省略，使用tk.mapper中的语句即可*/
