@@ -101,4 +101,20 @@ public class UserInfoService {
 
         return userInfo;
     }
+
+    /**
+     * 修改用户
+     * @param userInfo
+     */
+    public void update(UserInfo userInfo){
+        userInfoMapper.updateByPrimaryKeySelective(userInfo);
+    }
+
+    /**
+     * 根据 ID 删除用户
+     * @param id
+     */
+    public void delete(Long id){
+        userInfoMapper.deleteByPrimaryKey(id);
+    }
 }

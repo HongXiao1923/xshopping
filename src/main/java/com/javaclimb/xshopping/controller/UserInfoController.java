@@ -46,4 +46,28 @@ public class UserInfoController {
 
         return Result.success(userInfo);
     }
+
+    /**
+     * 更新用户
+     * @param userInfo
+     * @return
+     */
+    @PutMapping
+    public Result update(@RequestBody UserInfo userInfo){
+        userInfoService.update(userInfo);
+
+        return Result.success();
+    }
+
+    /**
+     * 删除用户
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/{id}")
+    public Result delete(@PathVariable Long id){
+        userInfoService.delete(id);
+
+        return Result.success();
+    }
 }
