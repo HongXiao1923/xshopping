@@ -5,7 +5,7 @@ import com.javaclimb.xshopping.common.ResultCode;
 /**
  * @author Einstein
  * @version 1.0
- * @description 用户自定义异常，用于前端返回错误信息
+ * @description Todo 用户自定义异常，用于前端返回错误信息
  * @date 2023/1/10 21:04
  * @see
  */

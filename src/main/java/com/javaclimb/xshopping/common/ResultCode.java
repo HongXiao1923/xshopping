@@ -3,7 +3,7 @@ package com.javaclimb.xshopping.common;
 /**
  * @author Einstein
  * @version 1.0
- * @description 统一返回码（枚举类）
+ * @description Todo 统一返回码（枚举类）
  * @date 2023/1/3 15:59
  */
 public enum ResultCode {

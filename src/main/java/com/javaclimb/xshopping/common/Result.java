@@ -3,7 +3,7 @@ package com.javaclimb.xshopping.common;
 /**
  * @author Einstein
  * @version 1.0
- * @description 统一返回前端结果类
+ * @description Todo 统一返回前端结果类
  * @date 2023/1/3 15:54
  * @see
  */
