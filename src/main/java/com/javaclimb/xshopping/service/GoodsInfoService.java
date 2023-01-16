@@ -1,5 +1,6 @@
 package com.javaclimb.xshopping.service;
 
+import cn.hutool.core.collection.CollectionUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.javaclimb.xshopping.entity.GoodsInfo;
@@ -41,6 +42,7 @@ public class GoodsInfoService {
      * @return
      */
     public GoodsInfo add(GoodsInfo goodsInfo){
+        convertFileListToFields(goodsInfo);
         goodsInfoMapper.insertSelective(goodsInfo);
 
         return goodsInfo;
@@ -51,6 +53,7 @@ public class GoodsInfoService {
      * @param goodsInfo
      */
     public void update(GoodsInfo goodsInfo){
+        convertFileListToFields(goodsInfo);
         goodsInfoMapper.updateByPrimaryKeySelective(goodsInfo);
     }
 
@@ -73,5 +76,16 @@ public class GoodsInfoService {
             return null;
         }
         return list.get(0);
+    }
+
+    /**
+     * 将页面传来的文件列表转换成以逗号隔开的id列表
+     * @param goodsInfo
+     */
+    private void convertFileListToFields(GoodsInfo goodsInfo){
+        List<Long> fileList = goodsInfo.getFileList();
+        if(!CollectionUtil.isEmpty(fileList)){
+            goodsInfo.setFields(fileList.toString());
+        }
     }
 }

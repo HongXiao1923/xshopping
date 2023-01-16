@@ -106,6 +106,9 @@
                       <td>{{obj.hot}}</td>
                       <td>{{obj.recommend}}</td>
                       <td>
+                        <button class="btn btn-primary btn-xs" @click="viewModal(obj)">预览</button>
+                      </td>
+                      <td>
                         <button class="btn btn-primary btn-xs" v-on:click="init(obj)">编辑</button>
                         <button class="btn btn-danger btn-xs" v-on:click="del(obj.id)">删除</button>
                       </td>
@@ -150,7 +153,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <span class="modal-title">请填写信息</span>
-          <button type="button" class="close" data-dismiss="modal">x</button>
+          <button type="button" class="close" data-dismiss="modal">X</button>
         </div>
         <div class="modal-body">
           <form class="form-horizontal">
@@ -204,6 +207,12 @@
                 </label>
               </div>
             </div>
+            <div class="form-group">
+              <div class="col-sm-3 control-label">上传图片</div>
+              <div class="col-sm-7">
+                <input @change="upload" @click="clearFile" multiple="multiple" type="file" ref="file">
+              </div>
+            </div>
 
           </form>
         </div>
@@ -214,6 +223,22 @@
       </div>
     </div>
   </div>
+
+  <!--模态框-图片预览-->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-title">图片预览</span>
+          <button type="button" class="close" data-dismiss="modal" @click="cancel">X</button>
+        </div>
+        <div class="modal-body" id="view-img" style="text-align: center">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <script src="../js/jquery-1.10.2.js"></script>
@@ -331,7 +356,51 @@
         }).catch(function (){
           console.log("取消成功！");
         });
+      },
+
+      //上传文件
+      upload: function(){
+        let files = this.$refs.file.files;
+        for(let i = 0; i < files.length; i++){
+          let formData = new FormData();
+          formData.append("file", files[i]);
+          axios.post("/files/upload", formData, {'Content-Type':'multipart/form-data'}).then(res => {
+            if(res.data.code ==='0'){
+              msg('success', '上传成功');
+              this.entity.fileList.push(res.data.data.id);
+            }else{
+              msg('error', res.data.msg);
+            }
+          });
+        }
+      },
+
+      //清空文件
+      clearFile: function (){
+        this.entity.fileList = [];
+      },
+
+      //预览图片
+      viewModal: function (data){
+        axios.get("/goodsInfo/" + data.id).then(res => {
+          if(res.data.code === "0"){
+            let fields = JSON.parse(res.data.data.fields);
+            $("#view-img").empty();     //先清空
+            fields.forEach(item => {
+              $("#view-img").append($(`<img id="img-id" src="/files/download/${item}" style="width:400px;margin-bottom:5px">`));
+            });
+            $("#myModal").show();
+          }else{
+            msg('error', res.data.msg);
+          }
+        });
+      },
+
+      //关闭预览框
+      cancel:function (){
+        $("#myModal").hide();
       }
+
     }
   });
 </script>
