@@ -88,4 +88,31 @@ public class GoodsInfoService {
             goodsInfo.setFields(fileList.toString());
         }
     }
+
+    /**
+     * 查询推荐商品
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    public PageInfo<GoodsInfo> findRecommendGoods(Integer pageNum, Integer pageSize){
+        PageHelper.startPage(pageNum, pageSize);
+        List<GoodsInfo> list = goodsInfoMapper.findRecommendGoods();
+
+        return PageInfo.of(list);
+    }
+
+    /**
+     * 查询热门商品
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    public PageInfo<GoodsInfo> findHotSalesGoods(Integer pageNum, Integer pageSize){
+        PageHelper.startPage(pageNum, pageSize);
+        List<GoodsInfo> list = goodsInfoMapper.findHotSalesGoods();
+
+        return PageInfo.of(list);
+    }
+
 }

@@ -81,4 +81,28 @@ public class GoodsInfoController {
 
         return Result.success(goodsInfoService.findById(id));
     }
+
+    /**
+     * 分页查询推荐商品
+     * @param pageNum 第几页
+     * @param pageSize 每页大小
+     * @return
+     */
+    @GetMapping("/findRecommendGoods")
+    public Result<PageInfo<GoodsInfo>> findRecommendGoods(@RequestParam(defaultValue = "1") Integer pageNum,
+                                            @RequestParam(defaultValue = "100") Integer pageSize){
+        return Result.success(goodsInfoService.findRecommendGoods(pageNum, pageSize));
+    }
+
+    /**
+     * 分页查询热卖商品
+     * @param pageNum 第几页
+     * @param pageSize 每页大小
+     * @return
+     */
+    @GetMapping("/findHotSalesGoods")
+    public Result<PageInfo<GoodsInfo>> findHotSalesGoods(@RequestParam(defaultValue = "1") Integer pageNum,
+                                                          @RequestParam(defaultValue = "10") Integer pageSize){
+        return Result.success(goodsInfoService.findHotSalesGoods(pageNum, pageSize));
+    }
 }
