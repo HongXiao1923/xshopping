@@ -28,7 +28,7 @@ public class UserInfoService {
     private UserInfoMapper userInfoMapper;
 
     /**
-     * 登录
+     * Todo 登录
      * @param name
      * @param password
      * @return
@@ -47,7 +47,7 @@ public class UserInfoService {
     }
 
     /**
-     * 重置密码（忘记密码时的暴力处理方法）
+     * Todo 重置密码（忘记密码时的暴力处理方法）
      * @param name
      * @return
      */
@@ -64,7 +64,7 @@ public class UserInfoService {
     }
 
     /**
-     * 分页查询用户列表
+     * Todo 分页查询用户列表
      * @param pageNum
      * @param pageSize
      * @param name
@@ -78,7 +78,7 @@ public class UserInfoService {
     }
 
     /**
-     * 新增用户
+     * Todo 新增用户
      * @param userInfo
      * @return
      */
@@ -103,7 +103,7 @@ public class UserInfoService {
     }
 
     /**
-     * 修改用户
+     * Todo 修改用户
      * @param userInfo
      */
     public void update(UserInfo userInfo){
@@ -111,7 +111,7 @@ public class UserInfoService {
     }
 
     /**
-     * 根据 ID 删除用户
+     * Todo 根据 ID 删除用户
      * @param id
      */
     public void delete(Long id){

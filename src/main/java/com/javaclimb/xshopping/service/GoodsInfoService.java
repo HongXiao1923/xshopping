@@ -23,7 +23,7 @@ public class GoodsInfoService {
     private GoodsInfoMapper goodsInfoMapper;
 
     /**
-     * 分页查询商品列表
+     * Todo 分页查询商品列表
      * @param pageNum
      * @param pageSize
      * @param name

@@ -22,7 +22,7 @@ public class UserInfoController {
     private UserInfoService userInfoService;
 
     /**
-     * 分页查询用户列表
+     * Todo 分页查询用户列表
      * @param pageNum 第几页
      * @param pageSize 每页大小
      * @param name 用户名
@@ -36,7 +36,7 @@ public class UserInfoController {
     }
 
     /**
-     * 新增用户
+     * Todo 新增用户
      * @param userInfo
      * @return
      */
@@ -48,7 +48,7 @@ public class UserInfoController {
     }
 
     /**
-     * 更新用户
+     * Todo 更新用户
      * @param userInfo
      * @return
      */
@@ -60,7 +60,7 @@ public class UserInfoController {
     }
 
     /**
-     * 删除用户
+     * Todo 删除用户
      * @param id
      * @return
      */

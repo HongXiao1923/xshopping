@@ -16,7 +16,7 @@ public class Result<T> {
     private T data;
 
     /**
-     * 不带参数的成功返回
+     * Todo 不带参数的成功返回
      * @return
      */
     public static Result success(){
@@ -28,7 +28,7 @@ public class Result<T> {
     }
 
     /**
-     * 带参数的成功返回
+     * Todo 带参数的成功返回
      * @return
      */
     public static <T> Result<T> success(T data){
@@ -40,7 +40,7 @@ public class Result<T> {
     }
 
     /**
-     * 不带参数的失败返回
+     * Todo 不带参数的失败返回（错误类型自定义）
      * @return
      */
     public static Result error(){
@@ -52,7 +52,7 @@ public class Result<T> {
     }
 
     /**
-     * 带错误提示的失败返回
+     * Todo 带错误提示的失败返回（错误类型自定义）
      * @return
      */
     public static Result error(String code, String msg){

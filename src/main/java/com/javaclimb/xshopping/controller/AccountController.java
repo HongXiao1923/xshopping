@@ -29,7 +29,7 @@ public class AccountController {
     private UserInfoService userInfoService;
 
     /**
-     * 登录
+     * Todo 登录
      * @param userInfo
      * @param request
      * @return
@@ -50,7 +50,7 @@ public class AccountController {
     }
 
     /**
-     * 重置密码为：123456
+     * Todo 重置密码为：123456
      * @param userInfo
      * @return
      */
@@ -60,7 +60,7 @@ public class AccountController {
     }
 
     /**
-     * 登出
+     * Todo 登出
      * @param request
      * @return
      */
