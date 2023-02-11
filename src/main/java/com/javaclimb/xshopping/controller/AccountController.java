@@ -7,6 +7,7 @@ import com.javaclimb.xshopping.common.ResultCode;
 import com.javaclimb.xshopping.entity.UserInfo;
 import com.javaclimb.xshopping.exception.CustomException;
 import com.javaclimb.xshopping.service.UserInfoService;
+import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -44,7 +45,7 @@ public class AccountController {
         UserInfo login = userInfoService.login(userInfo.getName(), userInfo.getPassword());
         HttpSession session = request.getSession();
         session.setAttribute(Common.USER_INFO, login);
-        session.setMaxInactiveInterval(60 * 24);    //过期时间为：24h
+        session.setMaxInactiveInterval(60 * 60 * 24);    //过期时间为：24h
 
         return Result.success(login);
     }
@@ -69,5 +70,37 @@ public class AccountController {
         request.getSession().setAttribute(Common.USER_INFO, null);
 
         return Result.success();
+    }
+
+    /**
+     * Todo 小程序端用户登录
+     * * @param userInfo
+     * @param request
+     * * @return Result<UserInfo>
+     **/
+    @PostMapping("/register")
+    public Result<UserInfo> register(@RequestBody UserInfo userInfo, HttpServletRequest request){
+        if(StrUtil.isBlank(userInfo.getName()) || StrUtil.isBlank(userInfo.getPassword())){
+            throw new CustomException(ResultCode.PARAM_ERROR);
+        }
+        UserInfo register = userInfoService.add(userInfo);
+        HttpSession session = request.getSession();
+        session.setAttribute(Common.USER_INFO, register);
+        session.setMaxInactiveInterval(60 * 60 * 24);
+        return Result.success(register);
+    }
+
+    /**
+     * Todo 判断用户是否已登陆
+     * * @param request
+     * * @return Result
+     **/
+    @GetMapping("/auth")
+    public Result getAuth(HttpServletRequest request){
+        Object user = request.getSession().getAttribute(Common.USER_INFO);
+        if(user == null){
+            return Result.error("401", "未登录");
+        }
+        return Result.success(user);
     }
 }
